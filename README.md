@@ -1,5 +1,13 @@
 # Serverless chat example
 
+Set up virtualenv:
+
+```sh
+$ virtualenv venv
+$ . venv/bin/activate
+$ pip install -r requirements.txt
+```
+
 Run the backend:
 
 ```sh
