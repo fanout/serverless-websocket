@@ -1,0 +1,6 @@
+PyJWT==1.4.2
+argparse==1.2.1
+gripcontrol==2.4.2
+pubcontrol==2.2.7
+requests==2.11.1
+wsgiref==0.1.2
