@@ -11,7 +11,7 @@ $ pip install -r requirements.txt
 Run the backend:
 
 ```sh
-$ stack chat-handler.py
+$ microcule chat-handler.py
 ```
 
 Run pushpin:
