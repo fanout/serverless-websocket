@@ -1,6 +1,11 @@
-PyJWT==1.4.2
+PyJWT==1.5.3
 argparse==1.2.1
-gripcontrol==2.4.2
-pubcontrol==2.2.7
-requests==2.11.1
+certifi==2017.7.27.1
+chardet==3.0.4
+gripcontrol==3.0.2
+idna==2.6
+pubcontrol==2.4.2
+requests==2.18.4
+six==1.11.0
+urllib3==1.22
 wsgiref==0.1.2
