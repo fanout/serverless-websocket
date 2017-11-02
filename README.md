@@ -1,6 +1,6 @@
-# Serverless chat example
+# Serverless WebSocket example
 
-This is a basic chat example using bare WebSocket messages, where the connections are managed by a GRIP-compatible service such as Pushpin or Fanout Cloud, and the backend logic is handled by a function backend such as Microcule or AWS Lambda.
+This is an example of how to send and receive WebSocket messages using a serverless stack. The WebSocket connections are managed by a GRIP-compatible proxy such as Pushpin or Fanout Cloud, and the backend logic is handled by a function backend such as Microcule or AWS Lambda.
 
 Any message sent from a client is relayed to all other connected clients.
 
@@ -17,7 +17,7 @@ $ pip install -r requirements.txt
 Run the backend:
 
 ```sh
-$ microcule chat-handler.py
+$ microcule handler.py
 ```
 
 Run pushpin:
@@ -26,7 +26,7 @@ Run pushpin:
 $ pushpin -m --route "* localhost:3000,over_http"
 ```
 
-Chat!
+Connect:
 
 ```sh
 $ wscat -c ws://localhost:7999
@@ -53,7 +53,7 @@ Create the deployment package:
 $ ./make-lambda-package.sh
 ```
 
-Upload `lambda-package.zip` to AWS Lambda, using the Python 2.7 runtime, and `chat-handler-lambda.handler` as the handler. Also, set the `GRIP_URL` environment variable containing Fanout Cloud settings, of the form:
+Upload `lambda-package.zip` to AWS Lambda, using the Python 2.7 runtime, and `handler-lambda.handler` as the handler. Also, set the `GRIP_URL` environment variable containing Fanout Cloud settings, of the form:
 
 ```
 https://api.fanout.io/realm/your-realm?iss=your-realm&key=base64:your-realm-key
@@ -63,7 +63,7 @@ Next, set up an API and resource in AWS API Gateway to point to the Lambda funct
 
 Finally, edit the Fanout Cloud domain origin server (SSL) to point to the host and port of the AWS API Gateway Invoke URL.
 
-Chat!
+Connect:
 
 ```sh
 $ wscat -c ws://{your-fanout-domain}/{your-api-gateway-path}/
