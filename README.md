@@ -1,6 +1,8 @@
 # Serverless chat example
 
-This is a basic chat demo using bare WebSocket messages, where the connections are managed by a GRIP-compatible service such as Pushpin or Fanout Cloud, and the backend logic is handled by a function backend such as Microcule or AWS Lambda.
+This is a basic chat example using bare WebSocket messages, where the connections are managed by a GRIP-compatible service such as Pushpin or Fanout Cloud, and the backend logic is handled by a function backend such as Microcule or AWS Lambda.
+
+Any message sent from a client is relayed to all other connected clients.
 
 ## Setup using Pushpin and Microcule
 
