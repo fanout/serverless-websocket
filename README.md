@@ -17,7 +17,7 @@ $ pip install -r requirements.txt
 Run the backend:
 
 ```sh
-$ microcule handler.py
+$ microcule handler-microcule.py
 ```
 
 Run pushpin:
