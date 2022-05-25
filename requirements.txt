@@ -1,4 +1,4 @@
-PyJWT==1.5.3
+PyJWT==2.4.0
 argparse==1.2.1
 certifi==2017.7.27.1
 chardet==3.0.4
