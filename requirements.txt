@@ -1,6 +1,6 @@
 PyJWT==1.5.3
 argparse==1.2.1
-certifi==2017.7.27.1
+certifi==2022.12.7
 chardet==3.0.4
 faas-grip==1.0.0
 gripcontrol==3.2.0
